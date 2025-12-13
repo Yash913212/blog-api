@@ -1,0 +1,254 @@
+{
+    "info": {
+        "name": "Blog API",
+        "_postman_id": "12345678-1234-1234-1234-123456789012",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Author",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"John Doe\", \"email\": \"john@example.com\"}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/authors/",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "authors",
+                        ""
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Authors",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "{{base_url}}/authors/",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "authors",
+                        ""
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Author by ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "{{base_url}}/authors/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "authors",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Author",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Jane Doe\", \"email\": \"jane@example.com\"}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/authors/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "authors",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Author",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{base_url}}/authors/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "authors",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Post",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"My First Post\", \"content\": \"This is the content.\", \"author_id\": 1}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/posts/",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "posts",
+                        ""
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Posts",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "{{base_url}}/posts/",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "posts",
+                        ""
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Posts by Author",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "{{base_url}}/posts/?author_id=1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "posts",
+                        ""
+                    ],
+                    "query": [
+                        {
+                            "key": "author_id",
+                            "value": "1"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Post by ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "{{base_url}}/posts/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "posts",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Post",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"Updated Title\", \"content\": \"Updated content.\"}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/posts/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "posts",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Post",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "{{base_url}}/posts/1",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "posts",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Posts by Author ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "{{base_url}}/authors/1/posts",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "authors",
+                        "1",
+                        "posts"
+                    ]
+                }
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://127.0.0.1:8000"
+        }
+    ]
+}
