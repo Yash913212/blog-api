@@ -10,7 +10,7 @@ A RESTful API for managing authors and posts with one-to-many relationships.
 4. `pip install -r requirements.txt`
 5. `uvicorn main:app --reload`
 
-API at `http://127.0.0.1:8000`, docs at `/docs`
+API at `http://127.0.0.1:5000`, docs at `/docs`
 
 ## Endpoints
 
