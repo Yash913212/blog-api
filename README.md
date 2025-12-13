@@ -36,3 +36,17 @@ Swagger Docs: `http://127.0.0.1:5000/docs`
 - SQLite
 - Pydantic
 - Uvicorn
+
+## Resources
+
+- **Designing a RESTful API with Foreign Keys**  
+  A guide on how to handle nested resources and relationships in REST API design.
+
+- **What is an ORM and How to Use It**  
+  An introduction to Object-Relational Mapping (ORM), a key tool for working with databases in modern applications.
+
+- **The N+1 Query Problem**  
+  An article explaining the common N+1 query performance issue and strategies to solve it, particularly with ORMs.
+
+- **PostgreSQL Foreign Key Constraints**  
+  Official PostgreSQL documentation on how to use foreign key constraints.
