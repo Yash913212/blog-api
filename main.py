@@ -4,7 +4,7 @@ from database import SessionLocal, engine
 from models import Base
 import crud
 from schemas import *
-from typing import List
+from typing import List, Optional
 
 Base.metadata.create_all(bind=engine)
 
